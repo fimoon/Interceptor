@@ -1,0 +1,11 @@
+public class Interceptor {
+    private String interceptorName;
+    public Interceptor(String interceptorName){
+        this.interceptorName = interceptorName;
+    }
+    public void invoke(InterceptorManager im){
+        System.out.println(interceptorName + " process before");
+        im.invokeInterceptor();
+        System.out.println(interceptorName + " process after");
+    }
+}
